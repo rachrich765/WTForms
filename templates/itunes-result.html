@@ -1,0 +1,7 @@
+<ul>
+{% for r in result_html}
+  <li>
+  <h2> Track Name: {{ r['trackName'] }} </h2>
+  <h3> Collection Name: {{ r['collectionName'] }} </h3>
+  {% endfor %}
+</ul>

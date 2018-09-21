@@ -1,0 +1,13 @@
+{% block content %}
+  <h1>Simple WTF-Form</h1>
+  <form method="POST" action="http://localhost:5000/itunes-result">
+      {{form.hidden_tag()}}
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+      <p>{{form.artist_name.label}}{{form.artist_name()}}</p>
+      <p>{{form.number_results.label}}{{form.number_results()}}</p>
+      <p>{{form.email.label}}{{form.email()}}</p>
+      {{ form.submit()}}
+  </form>
+{% endblock %}
